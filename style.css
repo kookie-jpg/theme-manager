@@ -60,7 +60,7 @@
 .tm-thumb {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     background-size: cover;
     background-position: center;
     display: flex;
