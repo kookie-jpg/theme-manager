@@ -1,0 +1,155 @@
+.tm-root {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.tm-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--SmartThemeBorderColor);
+}
+
+.tm-toolbar input[type="text"] {
+    flex: 1 1 200px;
+    min-width: 140px;
+}
+
+.tm-toolbar .menu_button {
+    white-space: nowrap;
+}
+
+.tm-count {
+    opacity: 0.7;
+    font-size: 0.85em;
+    margin-left: auto;
+}
+
+.tm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+    padding: 4px 2px 12px 2px;
+}
+
+.tm-empty {
+    opacity: 0.7;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.tm-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--black30a);
+    position: relative;
+}
+
+.tm-card.tm-active {
+    outline: 2px solid var(--active, #4ba3ff);
+    box-shadow: 0 0 8px rgba(75, 163, 255, 0.5);
+}
+
+.tm-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.tm-thumb-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    opacity: 0.55;
+}
+
+.tm-active-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-size: 0.68em;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background: var(--active, #4ba3ff);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.tm-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.45);
+    transition: opacity 0.15s ease;
+}
+
+.tm-thumb:hover .tm-thumb-overlay {
+    opacity: 1;
+}
+
+.tm-thumb-overlay i {
+    font-size: 1.1em;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.tm-thumb-overlay i:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.tm-body {
+    padding: 8px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tm-name {
+    font-weight: 600;
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tm-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+}
+
+.tm-actions .menu_button {
+    flex: 1;
+    padding: 4px 0;
+    font-size: 0.85em;
+}
+
+.tm-actions .tm-danger:hover {
+    color: var(--warning, #e06c6c);
+}
+
+.tm-hidden-input {
+    display: none;
+}
