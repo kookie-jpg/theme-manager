@@ -214,7 +214,7 @@ function buildCard(theme) {
 
     if (theme[PREVIEW_FIELD]) {
         const clearPreviewIcon = document.createElement('i');
-        clearPreviewIcon.className = 'fa-solid fa-image-slash';
+        clearPreviewIcon.className = 'fa-solid fa-circle-xmark';
         clearPreviewIcon.title = 'Remove preview image';
         clearPreviewIcon.addEventListener('click', (e) => {
             e.stopPropagation();
