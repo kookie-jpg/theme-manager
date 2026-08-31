@@ -138,6 +138,7 @@
     display: flex;
     gap: 6px;
     justify-content: space-between;
+    background: var(--SmartThemeQuoteColor);
 }
 
 .tm-actions .menu_button {
